@@ -20,8 +20,8 @@ class SendTokenEmailController {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "api.trackland@gmail.com",
-        pass: "Track@123"
+        user: "devtrackland@gmail.com",
+        pass: "Track@123*+"
       }
     })
 

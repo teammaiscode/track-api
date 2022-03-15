@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { CreateUsersService } from "../../services/admin/CreateUsersService";
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
 
 class CreateUsersController {
   async handle(request: Request, response: Response) {
@@ -10,13 +10,11 @@ class CreateUsersController {
 
     await service.execute({ name, email, admin, password });
 
-    return response.json({ message: "Usuário criado com sucesso!" });
-
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "api.trackland@gmail.com",
-        pass: "Track@123"
+        user: "devtrackland@gmail.com",
+        pass: "Track@123*+"
       }
     })
 

@@ -1,0 +1,15 @@
+{
+    "name": "default",
+    "type": "mysql",
+    "url": "mysql://maiscode01_add1:WpEM8MNIrqiq1o0BcMKnuser@mysql.maiscode.com.br:3306/maiscode01?schema=public",
+    "migrations": [
+        "dist/database/migrations/*.js"
+    ],
+    "entities": [
+        "dist/entities/*.js"
+    ],
+    "cli": {
+        "migrationsDir": "dist/database/migrations",
+        "entitiesDir": "dist/entities"
+    }
+}

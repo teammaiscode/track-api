@@ -18,15 +18,16 @@ class SendTokenEmailController {
     localStorage.setItem("emailRecuperar", email);
 
     let transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smart.iagentesmtp.com.br",
+      port: 587,
       auth: {
-        user: "devtrackland@gmail.com",
-        pass: "Track@123*+"
-      }
+        user: "kennedy@maiscode.com.br",
+        pass: "93a1e126",
+      },
     })
 
     const mailOptions = {
-      from: "api.trackland@gmail.com",
+      from: "kennedy@maiscode.com.br",
       to: email,
       subject: "Recuperação de Senha - Trackland",
       html: `
@@ -100,7 +101,7 @@ class SendTokenEmailController {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
-        console.log(err)
+        return response.json(err);
       } else {
         return response.json({ message: "Email enviado com sucesso!" });
       }

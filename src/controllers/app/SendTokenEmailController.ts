@@ -22,7 +22,7 @@ class SendTokenEmailController {
       port: 587,
       auth: {
         user: "kennedy@maiscode.com.br",
-        pass: "93a1e126",
+        pass: "d3223633",
       },
     })
 

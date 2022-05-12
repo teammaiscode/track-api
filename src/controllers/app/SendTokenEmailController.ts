@@ -5,7 +5,6 @@ import nodemailer from "nodemailer";
 
 class SendTokenEmailController {
   async handle(request: Request, response: Response) {
-
     const { email } = request.body;
 
     const service = new SendTokenEmailService();
@@ -25,7 +24,6 @@ class SendTokenEmailController {
         pass: "d3223633",
       },
     })
-
     const mailOptions = {
       from: "kennedy@maiscode.com.br",
       to: email,
@@ -71,12 +69,12 @@ class SendTokenEmailController {
       
                     <h1 style="color: black;font-weight:600;font-size:20px;line-height:23px;margin-bottom:55px;">RECUPERAR
                       SENHA DE ACESSO</h1>
-      
+                    <br>
                     <span
                       style="display: block;color:#0059A9;font-weight:600;font-size:30px;line-height:35px;margin-bottom:48px;">
                       ${token}
                     </span>
-      
+                    <br>
                     <span style="display: block;font-size:14px;line-height:16px;color:#000;">
                       Foi solicitado a recuperação de acesso ao sistema de identificação.
                       Casso não tenha sido você que fes esta requisição, apenas ignore

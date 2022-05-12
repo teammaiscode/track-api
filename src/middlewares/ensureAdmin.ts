@@ -6,7 +6,6 @@ import { UsersRepositories } from "../repositories/UsersRepositories";
 export async function ensureAdmin(request: Request, response: Response, next: NextFunction) {
 
   const usersRepositories = getCustomRepository(UsersRepositories)
-
   const { user_id } = request;
 
   const { admin } = await usersRepositories.findOne({
